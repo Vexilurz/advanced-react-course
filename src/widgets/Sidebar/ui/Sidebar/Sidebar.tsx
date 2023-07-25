@@ -5,7 +5,7 @@ import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
 import { LangSwitcher } from 'widgets/LangSwitcher/LangSwitcher'
 
 interface SidebarProps {
-  className: string
+  className?: string
 }
 
 export const Sidebar = ({ className }: SidebarProps) => {
@@ -21,7 +21,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
     >
       <button onClick={onToggle}>toggle</button>
       <div className={cl.switchers}>
-        <ThemeSwitcher className={''} />
+        <ThemeSwitcher />
         <LangSwitcher className={cl.lang}/>
       </div>
     </div>
