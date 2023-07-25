@@ -1,4 +1,4 @@
-import { type BuildOptions, type BuildPaths } from './types/config'
+import { type BuildOptions } from './types/config'
 import { buildLoaders } from './buildLoaders'
 import { buildResolvers } from './buildResolvers'
 import { buildPlugins } from './buildPlugins'
