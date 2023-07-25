@@ -1,7 +1,11 @@
 type Mods = Record<string, boolean | string | undefined>
-type StringOrUndefined = (string | undefined);
+type StringOrUndefined = (string | undefined)
 
-export function classNames (cls: string, mods: Mods = {}, additional: StringOrUndefined[] = []): string {
+export function classNames (
+  cls: string,
+  mods: Mods = {},
+  additional: StringOrUndefined[] = []
+): string {
   return [
     cls,
     ...additional.filter(Boolean),
