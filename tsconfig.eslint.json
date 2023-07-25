@@ -3,11 +3,16 @@
   "include": [
     // 👇️ add all the directories and files
     // that you want to lint here
-    "src",
-    "tests",
+    "./src",
+//    "tests",
 
     // add all files in which you see
     // the "parserOptions.project" error
-    ".eslintrc.js"
+    ".eslintrc.js",
+    "webpack.config.ts",
+    "./config"
+  ],
+  "exclude": [
+    "./node_modules"
   ]
 }
