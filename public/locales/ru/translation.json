@@ -1,4 +1,7 @@
 {
   "language": "Русский",
-  "Page not found": "Страница не найдена"
+  "Page not found": "Страница не найдена",
+  "Uncaught error occurred": "Произошла необработанная ошибка",
+  "Reload page": "Обновить страницу",
+  "throw error": "Кинуть ошибку"
 }

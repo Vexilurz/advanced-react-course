@@ -29,7 +29,7 @@
 |   +---19 Stylelint. Plugin for i18next
 |   +---20 Тестовая среда. Настраиваем Jest. Пишем первый тест Метка
 |   \---21 Несуществующие маршруты. Лоадер для загрузки страниц
-+---3
++---3 Storybook, RTL, Bundle analyzer, Error boundary, UI tests
 |   +---22 ErrorBoundary. Обработка React ошибок
 |   +---23 Анализ размера банда. BundleAnalyzer
 |   +---24 React Testing Library. Тесты на компоненты метка

@@ -4,18 +4,19 @@ import { type ButtonHTMLAttributes, type FC } from 'react'
 
 export enum ButtonTheme {
   CLEAR = 'clear',
+  DEFAULT = 'default'
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  className: string
-  theme: ButtonTheme
+  className?: string
+  theme?: ButtonTheme
 }
 
 export const Button: FC<ButtonProps> = (props) => {
   const {
     className,
     children,
-    theme = ButtonTheme.CLEAR,
+    theme = ButtonTheme.DEFAULT,
     ...otherProps
   } = props
 
