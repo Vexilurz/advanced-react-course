@@ -1,15 +1,22 @@
-import {createContext} from "react";
+import { createContext } from 'react'
 
 export enum Theme {
   LIGHT = 'light',
   DARK = 'dark',
 }
 
-export interface ThemeContextProps {
-  theme?: Theme;
-  setTheme?: (theme: Theme) => void;
+function dummySetTheme (theme: Theme): void {
+  throw new Error('setTheme is not defined!')
 }
 
-export const ThemeContext = createContext<ThemeContextProps>({})
+export interface ThemeContextProps {
+  theme: Theme
+  setTheme: (theme: Theme) => void
+}
 
-export const LOCAL_STORAGE_THEME_KEY = 'theme';
+export const ThemeContext = createContext<ThemeContextProps>({
+  theme: Theme.LIGHT,
+  setTheme: dummySetTheme
+})
+
+export const LOCAL_STORAGE_THEME_KEY = 'theme'

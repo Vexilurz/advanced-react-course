@@ -15,7 +15,8 @@
     // common js как с обычными пакетами с помощью import
     "esModuleInterop": true,
     // позволяет использовать import * as React from... без '* as'
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true
   },
   "ts-node": {
     "compilerOptions": {
