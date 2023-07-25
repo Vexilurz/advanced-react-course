@@ -5,11 +5,18 @@ export enum Theme {
   DARK = 'dark',
 }
 
-export interface ThemeContextProps {
-  theme?: Theme
-  setTheme?: (theme: Theme) => void
+function dummySetTheme (theme: Theme): void {
+  throw new Error('setTheme is not defined!')
 }
 
-export const ThemeContext = createContext<ThemeContextProps>({})
+export interface ThemeContextProps {
+  theme: Theme
+  setTheme: (theme: Theme) => void
+}
+
+export const ThemeContext = createContext<ThemeContextProps>({
+  theme: Theme.LIGHT,
+  setTheme: dummySetTheme
+})
 
 export const LOCAL_STORAGE_THEME_KEY = 'theme'
