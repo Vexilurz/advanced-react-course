@@ -7,25 +7,24 @@ module.exports = {
   extends: [
     'standard-with-typescript',
     'plugin:react/recommended',
-    'plugin:i18next/recommended'
+    'plugin:i18next/recommended',
+    'plugin:storybook/recommended'
   ],
-  overrides: [
-    {
-      // env: {
-      //   node: true
-      // },
-      files: [
-        // '.eslintrc.{js,cjs}',
-        '**/src/**/*.test.{ts,tsx}'
-      ],
-      rules: {
-        'i18next/no-literal-string': 'off'
-      }
-      // parserOptions: {
-      //   sourceType: 'script'
-      // }
+  overrides: [{
+    // env: {
+    //   node: true
+    // },
+    files: [
+    // '.eslintrc.{js,cjs}',
+    '**/src/**/*.test.{ts,tsx}'],
+    rules: {
+      'i18next/no-literal-string': 'off'
     }
-  ],
+    // parserOptions: {
+    //   sourceType: 'script'
+    // }
+  }],
+
   parserOptions: {
     project: 'tsconfig.eslint.json',
     parser: '@typescript-eslint/parser',
@@ -41,9 +40,9 @@ module.exports = {
     'react/jsx-indent': [2, 2],
     'react/jsx-indent-props': [2, 2],
     indent: [2, 2],
-    'react/jsx-filename-extension': [2,
-      { extensions: ['.js', '.jsx', '.ts', '.tsx'] }
-    ],
+    'react/jsx-filename-extension': [2, {
+      extensions: ['.js', '.jsx', '.ts', '.tsx']
+    }],
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'warn',
@@ -61,15 +60,16 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'warn',
     'no-underscore-dangle': 'off',
-    'i18next/no-literal-string': ['error',
-      {
-        markupOnly: true,
-        ignoreAttribute: ['data-testid', 'to']
-      }
-    ],
-    'max-len': ['error', { ignoreComments: true, code: 100 }]
+    'i18next/no-literal-string': ['error', {
+      markupOnly: true,
+      ignoreAttribute: ['data-testid', 'to']
+    }],
+    'max-len': ['error', {
+      ignoreComments: true,
+      code: 100
+    }]
   },
   globals: {
     __IS_DEV__: true
   }
-}
+};
