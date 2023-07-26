@@ -3,6 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
+import path from 'path'
+
 export default {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -27,7 +29,7 @@ export default {
 
   // An array of regexp pattern strings used to skip coverage collection
   coveragePathIgnorePatterns: [
-    "\\\\node_modules\\\\"
+    '\\\\node_modules\\\\'
   ],
 
   // Indicates which provider should be used to instrument code for coverage
@@ -67,18 +69,29 @@ export default {
 
   // An array of directory names to be searched recursively up from the requiring module's location
   moduleDirectories: [
-    "node_modules"
+    'node_modules'
+  ],
+
+  modulePaths: [
+    '<rootDir>src'
   ],
 
   // An array of file extensions your modules use
   moduleFileExtensions: [
-    "js",
-    "jsx",
-    "ts",
-    "tsx",
-    "json",
-    "node"
+    'js',
+    'jsx',
+    'ts',
+    'tsx',
+    'json',
+    'node'
   ],
+
+  setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+
+  moduleNameMapper: {
+    '\\.s?css$': 'identity-obj-proxy',
+    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx')
+  },
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   // moduleNameMapper: {},
@@ -137,7 +150,7 @@ export default {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: "jsdom",
+  testEnvironment: 'jsdom',
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -150,7 +163,7 @@ export default {
     '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
     // "**/__tests__/**/*.[jt]s?(x)",
     // "**/?(*.)+(spec|test).[tj]s?(x)"
-  ],
+  ]
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [
@@ -192,4 +205,5 @@ export default {
 
   // Whether to use watchman for file crawling
   // watchman: true,
-};
+
+}
