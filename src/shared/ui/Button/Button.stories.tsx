@@ -1,20 +1,25 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Button } from './Button'
+import { Button, ButtonTheme } from './Button'
 
 const meta = {
   title: 'shared/Button',
-  component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' }
-  }
+  component: Button
 } satisfies Meta<typeof Button>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
-    label: 'Button'
+    children: 'Text',
+    theme: ButtonTheme.DEFAULT
+  }
+}
+
+export const Clear: Story = {
+  args: {
+    children: 'Text',
+    theme: ButtonTheme.CLEAR
   }
 }
