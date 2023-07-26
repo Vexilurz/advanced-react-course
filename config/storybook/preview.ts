@@ -1,4 +1,6 @@
 import type { Preview } from '@storybook/react'
+import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator/StyleDecorator'
+import 'app/styles/index.scss'
 
 const preview: Preview = {
   parameters: {
@@ -8,7 +10,10 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/
       }
-    }
+    },
+    decorators: [
+      StyleDecorator
+    ]
   }
 }
 
