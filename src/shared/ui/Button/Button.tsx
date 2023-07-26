@@ -3,8 +3,9 @@ import cl from './Button.module.scss'
 import { type ButtonHTMLAttributes, type FC } from 'react'
 
 export enum ButtonTheme {
+  DEFAULT = 'default',
   CLEAR = 'clear',
-  DEFAULT = 'default'
+  OUTLINE = 'outline'
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
