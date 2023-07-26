@@ -7,8 +7,8 @@ module.exports = {
   extends: [
     'standard-with-typescript',
     'plugin:react/recommended',
-    'plugin:i18next/recommended',
-    'plugin:storybook/recommended'
+    'plugin:i18next/recommended'
+    // 'plugin:storybook/recommended'
   ],
   overrides: [{
     // env: {
@@ -16,7 +16,7 @@ module.exports = {
     // },
     files: [
     // '.eslintrc.{js,cjs}',
-    '**/src/**/*.test.{ts,tsx}'],
+      '**/src/**/*.test.{ts,tsx}'],
     rules: {
       'i18next/no-literal-string': 'off'
     }
@@ -72,4 +72,4 @@ module.exports = {
   globals: {
     __IS_DEV__: true
   }
-};
+}
