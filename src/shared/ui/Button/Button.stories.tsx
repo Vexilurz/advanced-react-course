@@ -16,30 +16,21 @@ export const Default: Story = {
   args: {
     children: 'Text',
     theme: ButtonTheme.DEFAULT
-  },
-  decorators: [
-    ThemeDecorator(Theme.LIGHT)
-  ]
+  }
 }
 
 export const Clear: Story = {
   args: {
     children: 'Text',
     theme: ButtonTheme.CLEAR
-  },
-  decorators: [
-    ThemeDecorator(Theme.LIGHT)
-  ]
+  }
 }
 
 export const Outline: Story = {
   args: {
     children: 'Text',
     theme: ButtonTheme.OUTLINE
-  },
-  decorators: [
-    ThemeDecorator(Theme.LIGHT)
-  ]
+  }
 }
 
 export const OutlineDark: Story = {
