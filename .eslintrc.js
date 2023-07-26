@@ -67,7 +67,8 @@ module.exports = {
     'max-len': ['error', {
       ignoreComments: true,
       code: 100
-    }]
+    }],
+    '@typescript-eslint/prefer-ts-expect-error': 'off'
   },
   globals: {
     __IS_DEV__: true
