@@ -3,5 +3,7 @@
   "Page not found": "Страница не найдена",
   "Uncaught error occurred": "Произошла необработанная ошибка",
   "Reload page": "Обновить страницу",
-  "throw error": "Кинуть ошибку"
+  "throw error": "Кинуть ошибку",
+  "home": "Главная",
+  "about": "О сайте"
 }
